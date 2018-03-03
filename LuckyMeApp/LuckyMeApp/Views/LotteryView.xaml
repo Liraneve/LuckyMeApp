@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LuckyMeApp.Views.LottoryView">
+  <ContentPage.Content>
+    <StackLayout Padding="0,20,0,0" Spacing="10">
+
+      <Grid>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="90*"/>
+          <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row ="0" BackgroundColor="White">
+          <Grid>
+            <ListView ItemsSource="{Binding LottoryNumbers}">
+              <ListView.ItemTemplate>
+                <DataTemplate>
+                  <ViewCell>
+                    <Grid>
+                      <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="87.5*"/>
+                        <ColumnDefinition Width="12.5*"/>
+                      </Grid.ColumnDefinitions>
+
+                      <Grid Grid.Column="0" BackgroundColor="#fcded4" Margin="1">
+                        <Grid>
+                          <Grid>
+                            <Grid.ColumnDefinitions>
+                              <ColumnDefinition Width="14.2*"/>
+                              <ColumnDefinition Width="14.2*"/>
+                              <ColumnDefinition Width="14.2*"/>
+                              <ColumnDefinition Width="14.2*"/>
+                              <ColumnDefinition Width="14.2*"/>
+                              <ColumnDefinition Width="14.2*"/>
+                              <ColumnDefinition Width="14.2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Grid.Column="0" Margin="2">
+                              <Grid>
+                                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding RowNumber}" FontSize="20" TextColor="#e59e95"/>
+                              </Grid>
+                            </Grid>
+                            <Grid Grid.Column="1" BackgroundColor="#b4645E" Margin="2">
+                              <Grid BackgroundColor="White" Margin="1">
+                                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding Number1}" FontSize="20"/>
+                              </Grid>
+                            </Grid>
+                            <Grid Grid.Column="2" BackgroundColor="#b4645E" Margin="2">
+                              <Grid BackgroundColor="White" Margin="1">
+                                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding Number2}" FontSize="20"/>
+                              </Grid>
+                            </Grid>
+                            <Grid Grid.Column="3" BackgroundColor="#b4645E" Margin="2">
+                              <Grid BackgroundColor="White" Margin="1">
+                                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding Number3}" FontSize="20"/>
+                              </Grid>
+                            </Grid>
+                            <Grid Grid.Column="4" BackgroundColor="#b4645E" Margin="2">
+                              <Grid BackgroundColor="White" Margin="1">
+                                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding Number4}" FontSize="20"/>
+                              </Grid>
+                            </Grid>
+                            <Grid Grid.Column="5" BackgroundColor="#b4645E" Margin="2">
+                              <Grid BackgroundColor="White" Margin="1">
+                                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding Number5}" FontSize="20"/>
+                              </Grid>
+                            </Grid>
+                            <Grid Grid.Column="6" BackgroundColor="#b4645E" Margin="2">
+                              <Grid BackgroundColor="White" Margin="1">
+                                <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding Number6}" FontSize="20"/>
+                              </Grid>
+                            </Grid>
+                          </Grid>
+                        </Grid>
+                      </Grid>
+                      <Grid Grid.Column="1" BackgroundColor="#fcded4" Margin="0,1,1,1">
+                        <Grid BackgroundColor="#b4645E" Margin="2">
+                          <Grid BackgroundColor="White" Margin="1">
+                            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="{Binding HardNumber}" FontSize="20"/>
+                          </Grid>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                  </ViewCell>
+                </DataTemplate>
+              </ListView.ItemTemplate>
+            </ListView>
+          </Grid>
+        </Grid>
+
+        <Grid Grid.Row ="1">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="*"/>
+          </Grid.ColumnDefinitions>
+          <Button x:Name="ButtonRemoveBox" Text="-" FontSize="20" Grid.Column="0" IsEnabled="{Binding IsEnableButtonRemoveBox}"></Button>
+          <Label Text="{Binding NumberOfBoxesTitle}" Grid.Column="1"></Label>
+          <Button x:Name="ButtonAddBox" Text="+" FontSize="20" Grid.Column="2" IsEnabled="{Binding IsEnableButtonAddBox}"></Button>
+        </Grid>
+
+      </Grid>
+
+
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LuckyMeApp.Views.CoinView">
+  
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="480"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Image x:Name="CoinImage" Source="Head.png" HorizontalOptions="Center" HeightRequest="200" Grid.Row="0"/>
+    <Button x:Name="CoinButon" Clicked="CoinButon_OnClicked" Text="Flip Coin" VerticalOptions="End" Grid.Row="1" WidthRequest="150" HeightRequest="80"/>
+  </Grid>
+  
+
+</ContentPage>

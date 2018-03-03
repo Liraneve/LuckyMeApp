@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4AD3E8B-73AC-44D3-A014-008AEE4AF317}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LuckyMeApp</RootNamespace>
+    <AssemblyName>LuckyMeApp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\CoinViewModel.cs" />
+    <Compile Include="ViewModel\DiceViewModel.cs" />
+    <Compile Include="ViewModel\GroupsViewModel.cs" />
+    <Compile Include="ViewModel\LotteryViewModel.cs" />
+    <Compile Include="Views\CoinView.xaml.cs">
+      <DependentUpon>CoinView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DiceView.xaml.cs">
+      <DependentUpon>DiceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GroupsView.xaml.cs">
+      <DependentUpon>GroupsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LotteryView.xaml.cs">
+      <DependentUpon>LotteryView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="ILNumerics.Computing, Version=4.8.0.0, Culture=neutral, PublicKeyToken=8d9bf50ef854734d, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.Computing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ILNumerics.Core, Version=4.8.0.0, Culture=neutral, PublicKeyToken=9651adc37f12bb00, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ILNumerics.Drawing, Version=4.8.0.0, Culture=neutral, PublicKeyToken=e22c8a010c3b081a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.Drawing.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ILNumerics.IO.HDF5, Version=4.8.0.0, Culture=neutral, PublicKeyToken=85055996c33d20cc, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.IO.HDF5.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ILNumerics.Toolboxes.MachineLearning, Version=4.8.0.0, Culture=neutral, PublicKeyToken=630a0f4f2119eebc, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.Toolboxes.MachineLearning.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ILNumerics.Toolboxes.Optimization, Version=4.8.0.0, Culture=neutral, PublicKeyToken=d11317283e0d33b5, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.Toolboxes.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ILNumerics.Toolboxes.Statistics, Version=4.8.0.0, Culture=neutral, PublicKeyToken=176aaed3d023b64c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ILNumerics.4.8.0.0\lib\ILNumerics.Toolboxes.Statistics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ILNumerics.4.8.0.0\lib\OpenTK.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ILNumerics.4.8.0.0\lib\OpenTK.GLControl.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Geolocator, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Geolocator.4.2.0\lib\netstandard1.0\Plugin.Geolocator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.Geolocator.Abstractions, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.Geolocator.4.2.0\lib\netstandard1.0\Plugin.Geolocator.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.SimpleAudioPlayer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.SimpleAudioPlayer.1.0.2\lib\netstandard1.0\Plugin.SimpleAudioPlayer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Plugin.SimpleAudioPlayer.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xam.Plugin.SimpleAudioPlayer.1.0.2\lib\netstandard1.0\Plugin.SimpleAudioPlayer.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Urho.Forms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\UrhoSharp.Forms.1.1.214\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Urho.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.0.107\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.0.107\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Xamarin.Forms.2.3.0.107\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GettingStarted.Xamarin" />
+    <None Include="Models\Box.mdl" />
+    <None Include="Models\Cone.mdl" />
+    <None Include="Models\Cylinder.mdl" />
+    <None Include="Models\Dice.mdl" />
+    <None Include="Models\Dome.mdl" />
+    <None Include="Models\Plane.mdl" />
+    <None Include="Models\Pyramid.mdl" />
+    <None Include="Models\Sphere.mdl" />
+    <None Include="Models\Torus.mdl" />
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Page1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\LotteryView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\CoinView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\GroupsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\DiceView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin32\libiomp5md.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="bin32\mkl_custom.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="bin64\libiomp5md.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="bin64\mkl_custom.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Audio\3D_Coin_Flip.mp3" />
+    <Content Include="Audio\Dice_SoundEffect.mp3" />
+    <Content Include="Images\Dice_num1.png" />
+    <Content Include="Images\Dice_num2.png" />
+    <Content Include="Images\Dice_num3.png" />
+    <Content Include="Images\Dice_num4.png" />
+    <Content Include="Images\Dice_num5.png" />
+    <Content Include="Images\Dice_num6.png" />
+    <Content Include="Images\Head.png" />
+    <Content Include="Images\Tail.png" />
+    <Content Include="SoundEffects\Dice_SoundEffect.mp3" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Forms.2.3.0.107\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.0.107\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Xamarin.Forms.2.3.0.107\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.2.3.0.107\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+  </Target>
+</Project>

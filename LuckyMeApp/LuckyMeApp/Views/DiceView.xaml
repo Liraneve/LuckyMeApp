@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LuckyMeApp.Views.DiceView">
+  <ContentPage.Content>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="50"/>
+        <RowDefinition Height="430"/>
+        <RowDefinition Height="50"/>
+      </Grid.RowDefinitions>
+    <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Center">
+      <!-- Picker number of dices -->
+      <StackLayout VerticalOptions="Start" HorizontalOptions="Center" Grid.Row="0">
+        <Frame OutlineColor="Red" Padding="5" HorizontalOptions="Center">
+          <Image Source="dice_logo.png" HorizontalOptions="Center" HeightRequest="100"/>
+        </Frame>
+        
+      </StackLayout>
+      
+      <Grid Grid.Row="1" VerticalOptions="Center" Margin="0,50,0,0">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="100"/>
+          <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <Image HeightRequest="100" x:Name="Dice1" Grid.Row="0" HorizontalOptions="Start"></Image>
+        <Image HeightRequest="100" x:Name="Dice2" Grid.Row="0" HorizontalOptions="Start"></Image>
+        <Image HeightRequest="100" x:Name="Dice3" Grid.Row="0" HorizontalOptions="Start"></Image>
+        <Image HeightRequest="100" x:Name="Dice4" Grid.Row="1" HorizontalOptions="Start"></Image>
+        <Image HeightRequest="100" x:Name="Dice5" Grid.Row="1" HorizontalOptions="Start"></Image>
+        <Image HeightRequest="100" x:Name="Dice6" Grid.Row="1" HorizontalOptions="Start"></Image>
+
+        <!--<Image x:Name="Dice1" Grid.Row="0" Grid.Column="0"></Image>
+        <Image x:Name="Dice2" Grid.Row="1" Grid.Column="0"></Image>
+        <Image x:Name="Dice3" Grid.Row="2" Grid.Column="0"></Image>
+        <Image x:Name="Dice4" Grid.Row="0" Grid.Column="1"></Image>
+        <Image x:Name="Dice5" Grid.Row="1" Grid.Column="1"></Image>
+        <Image x:Name="Dice6" Grid.Row="2" Grid.Column="1"></Image>-->
+      </Grid>
+      
+      <!-- Dice Images 
+      <ListView ItemsSource="{Binding DiceImages}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Center">
+                <Image Aspect="AspectFill" HeightRequest="100" WidthRequest="100" Source="{Binding ImageSource}"></Image>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>-->
+      
+      
+
+      <!-- Get dice images button 
+      <StackLayout VerticalOptions="EndAndExpand" Grid.Row="2">
+      <Button Text="Roll it" Clicked="Button_OnClicked"></Button>
+      </StackLayout>-->
+    </StackLayout>
+      <Grid Grid.Row="2">
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="150"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Text="-" FontSize="20" Clicked="Button_OnRemoveDice" Grid.Column="0"></Button>
+        <Button Text="Roll it" Clicked="Button_OnClicked" Grid.Column="1"></Button>
+        <Button Text="+" FontSize="20" Clicked="Button_OnAddDice" Grid.Column="2"></Button>
+      </Grid>
+      
+    </Grid>
+    
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LuckyMeApp.MainPage" Title="Lucky Me Application">
+  <StackLayout >
+  <StackLayout>
+    <Button x:Name="LottoryButton" WidthRequest="200" HeightRequest="70" Text="Lottory" Clicked="LottoryButton_OnClicked"/>
+    <Button x:Name="DiceButton" WidthRequest="200" HeightRequest="70" Text="Dice" Clicked="DiceButton_OnClicked"/>
+    <Button x:Name="GroupsButton" WidthRequest="200" HeightRequest="70" Text="Groups" Clicked="GroupsButton_OnClicked"/>
+    <Button x:Name="CoinButton" WidthRequest="200" HeightRequest="70" Text="Coin" Clicked="CoinButton_OnClicked"/>
+  </StackLayout>
+
+    <!--  <StackLayout VerticalOptions="End" Padding="0,150,0,0">
+    <Button x:Name="Exit" WidthRequest="200" HeightRequest="70" VerticalOptions="End" Text="Exit" Clicked="Exit_OnClicked"/>
+  </StackLayout> -->
+  </StackLayout>
+  
+</ContentPage>
