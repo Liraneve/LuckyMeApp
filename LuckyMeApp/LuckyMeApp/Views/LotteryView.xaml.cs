@@ -14,6 +14,7 @@ namespace LuckyMeApp.Views
         {
             LotteryViewModel vm;
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = vm = new LotteryViewModel();
 
             ButtonRemoveBox.Clicked += (sender, args) =>

@@ -178,6 +178,13 @@
     <AndroidResource Include="Resources\drawable\dice_logo.png" />
     <AndroidResource Include="Resources\drawable\Tail.png" />
     <AndroidResource Include="Resources\drawable\Head.png" />
+    <AndroidResource Include="Resources\drawable\LotteryButton.png" />
+    <AndroidResource Include="Resources\drawable\LotteryButton2.png" />
+    <AndroidResource Include="Resources\drawable\LotteryButton3.png" />
+    <AndroidResource Include="Resources\drawable\DiceButton.png" />
+    <AndroidResource Include="Resources\drawable\CoinButton.png" />
+    <AndroidResource Include="Resources\drawable\Logo.png" />
+    <AndroidResource Include="Resources\drawable\Logo2.png" />
     <Content Include="UrhoSharpReadme.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

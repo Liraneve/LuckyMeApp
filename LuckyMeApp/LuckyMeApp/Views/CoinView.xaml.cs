@@ -17,6 +17,7 @@ namespace LuckyMeApp.Views
         public CoinView()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             m_imagesList.Add("Head.png");
             m_imagesList.Add("Tail.png");
             player.Load("3D_Coin_Flip.wav");

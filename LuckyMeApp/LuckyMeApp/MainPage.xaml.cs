@@ -13,6 +13,7 @@ namespace LuckyMeApp
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private void LottoryButton_OnClicked(object sender, EventArgs e)

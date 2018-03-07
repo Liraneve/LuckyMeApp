@@ -14,6 +14,7 @@ namespace LuckyMeApp.Views
         public GroupsView()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         protected override async void OnAppearing()

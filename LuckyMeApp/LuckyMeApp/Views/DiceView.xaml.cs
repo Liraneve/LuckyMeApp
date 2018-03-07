@@ -24,6 +24,7 @@ namespace LuckyMeApp.Views
             //player.Load(@"C:\Users\liran\Downloads\Dice_SoundEffect.mp3");
             player.Load("Dice_SoundEffect.wav");
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             BindingContext = viewModel = new DiceViewModel();
         }
 

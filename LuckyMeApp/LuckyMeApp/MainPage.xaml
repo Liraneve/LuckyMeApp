@@ -2,17 +2,39 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="LuckyMeApp.MainPage" Title="Lucky Me Application">
-  <StackLayout >
-  <StackLayout>
-    <Button x:Name="LottoryButton" WidthRequest="200" HeightRequest="70" Text="Lottory" Clicked="LottoryButton_OnClicked"/>
-    <Button x:Name="DiceButton" WidthRequest="200" HeightRequest="70" Text="Dice" Clicked="DiceButton_OnClicked"/>
-    <Button x:Name="GroupsButton" WidthRequest="200" HeightRequest="70" Text="Groups" Clicked="GroupsButton_OnClicked"/>
-    <Button x:Name="CoinButton" WidthRequest="200" HeightRequest="70" Text="Coin" Clicked="CoinButton_OnClicked"/>
-  </StackLayout>
+  
+  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    <Grid HorizontalOptions="Center" VerticalOptions="Center">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="10*"></RowDefinition>
+        <RowDefinition Height="70*"></RowDefinition>
+        <RowDefinition Height="20*"></RowDefinition>
+      </Grid.RowDefinitions>
+      <Image Grid.Row="0" Source="Logo2.png" Aspect="AspectFill" VerticalOptions="StartAndExpand"></Image>
+      <Grid Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="170"></RowDefinition>
+          <RowDefinition Height="170"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="170"/>
+          <ColumnDefinition Width="170"/>
+        </Grid.ColumnDefinitions>
 
+        <Button x:Name="LottoryButton" Grid.Row="0" Grid.Column="0" Image="LotteryButton3.png" BackgroundColor="Transparent" Clicked="LottoryButton_OnClicked"/>
+        <Button x:Name="DiceButton" Grid.Row="0" Grid.Column="1"  Text="Dice" Clicked="DiceButton_OnClicked" Image="DiceButton.png" BackgroundColor="Transparent"/>
+        <Button x:Name="GroupsButton" Grid.Row="1" Grid.Column="0" WidthRequest="200" HeightRequest="70" Text="Groups" Clicked="GroupsButton_OnClicked"/>
+        <Button x:Name="CoinButton" Grid.Row="1" Grid.Column="1" WidthRequest="200" HeightRequest="70" Text="Coin" Clicked="CoinButton_OnClicked" Image="CoinButton.png" BackgroundColor="Transparent"/>
+
+      </Grid>
+
+      <Button x:Name="Exit" WidthRequest="200" Grid.Row="2" HeightRequest="70" VerticalOptions="End" Text="Exit" Clicked="Exit_OnClicked"/>
+    </Grid>
+      </StackLayout>
+ 
     <!--  <StackLayout VerticalOptions="End" Padding="0,150,0,0">
     <Button x:Name="Exit" WidthRequest="200" HeightRequest="70" VerticalOptions="End" Text="Exit" Clicked="Exit_OnClicked"/>
   </StackLayout> -->
-  </StackLayout>
+
   
 </ContentPage>

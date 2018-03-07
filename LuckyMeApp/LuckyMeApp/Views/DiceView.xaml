@@ -5,15 +5,15 @@
   <ContentPage.Content>
     <Grid>
       <Grid.RowDefinitions>
-        <RowDefinition Height="50"/>
-        <RowDefinition Height="430"/>
-        <RowDefinition Height="50"/>
+        <RowDefinition Height="10*"/>
+        <RowDefinition Height="80*"/>
+        <RowDefinition Height="10*"/>
       </Grid.RowDefinitions>
     <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="Center">
       <!-- Picker number of dices -->
       <StackLayout VerticalOptions="Start" HorizontalOptions="Center" Grid.Row="0">
         <Frame OutlineColor="Red" Padding="5" HorizontalOptions="Center">
-          <Image Source="dice_logo.png" HorizontalOptions="Center" HeightRequest="100"/>
+          <Image Source="dice_logo.png"/>
         </Frame>
         
       </StackLayout>

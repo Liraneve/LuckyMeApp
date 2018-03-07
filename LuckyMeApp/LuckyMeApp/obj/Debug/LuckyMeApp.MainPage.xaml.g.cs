@@ -29,12 +29,16 @@ namespace LuckyMeApp {
         private global::Xamarin.Forms.Button CoinButton;
         
         [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
+        private global::Xamarin.Forms.Button Exit;
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(MainPage));
             LottoryButton = this.FindByName<global::Xamarin.Forms.Button>("LottoryButton");
             DiceButton = this.FindByName<global::Xamarin.Forms.Button>("DiceButton");
             GroupsButton = this.FindByName<global::Xamarin.Forms.Button>("GroupsButton");
             CoinButton = this.FindByName<global::Xamarin.Forms.Button>("CoinButton");
+            Exit = this.FindByName<global::Xamarin.Forms.Button>("Exit");
         }
     }
 }
